@@ -8,8 +8,13 @@ export default defineConfig({
 		lib: {
 			entry: resolve(__dirname, 'src/index.ts'),
 			name: 'base-report-util',
-			fileName: 'base-report-util'
+			fileName: 'base-report-util',
+			formats: ['es']
 		}
 	},
-	plugins: [dts()]
+	plugins: [
+		dts({
+			insertTypesEntry: true
+		})
+	]
 })

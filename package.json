@@ -1,5 +1,19 @@
 {
 	"name": "base-report-util",
+	"description": "This package contains utility functions and types that are used for building base.report.",
+	"author": "e0",
+	"license": "MIT",
+	"homepage": "https://base.report",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/base-report/base-report-util.git"
+	},
+	"bugs": {
+		"url": "https://github.com/base-report/base-report-util/issues"
+	},
+	"keywords": [
+		"base-report"
+	],
 	"version": "0.0.1",
 	"type": "module",
 	"module": "./dist/base-report-util.js",
