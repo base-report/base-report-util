@@ -2,6 +2,7 @@
 	"name": "base-report-util",
 	"description": "This package contains utility functions and types that are used for building base.report.",
 	"author": "e0",
+	"version": "0.0.3",
 	"license": "MIT",
 	"homepage": "https://base.report",
 	"repository": {
@@ -14,22 +15,11 @@
 	"keywords": [
 		"base-report"
 	],
-	"version": "0.0.2",
 	"type": "module",
 	"module": "./dist/base-report-util.js",
-	"types": "./dist/index.d.ts",
-	"exports": {
-		".": {
-			"import": "./dist/base-report-util.js",
-			"require": "./dist/base-report-util.umd.cjs"
-		}
-	},
-	"files": [
-		"dist"
-	],
 	"scripts": {
 		"dev": "vite",
-		"build": "tsc && vite build",
+		"build": "ncc build src/index.ts -o dist",
 		"preview": "vite preview",
 		"format": "prettier --write .",
 		"test": "vitest",
@@ -37,11 +27,11 @@
 	},
 	"devDependencies": {
 		"@types/node": "^18.14.0",
+		"@vercel/ncc": "^0.36.1",
 		"@vitest/coverage-c8": "^0.28.5",
 		"prettier": "2.8.4",
-		"typescript": "^4.9.3",
+		"typescript": "^4.9.5",
 		"vite": "^4.1.0",
-		"vite-plugin-dts": "2.0.0-beta.2",
 		"vitest": "^0.28.5"
 	}
 }
