@@ -2,7 +2,7 @@
 	"name": "base-report-util",
 	"description": "This package contains utility functions and types that are used for building base.report.",
 	"author": "e0",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"license": "MIT",
 	"homepage": "https://base.report",
 	"repository": {
@@ -16,7 +16,7 @@
 		"base-report"
 	],
 	"type": "module",
-	"module": "./dist/base-report-util.js",
+	"module": "./dist/index.js",
 	"files": [
 		"dist"
 	],
@@ -24,6 +24,7 @@
 	"scripts": {
 		"dev": "vite",
 		"build": "ncc build src/index.ts -o dist",
+		"prepare": "pnpm build",
 		"preview": "vite preview",
 		"format": "prettier --write .",
 		"test": "vitest",
