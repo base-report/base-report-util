@@ -1,18 +1,22 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@types/cookie': ^0.5.1
   '@types/node': ^18.14.0
   '@vercel/ncc': ^0.36.1
   '@vitest/coverage-c8': ^0.28.5
+  cookie: ^0.5.0
   prettier: 2.8.4
   typescript: ^4.9.5
   vite: ^4.1.0
   vitest: ^0.28.5
 
 devDependencies:
+  '@types/cookie': 0.5.1
   '@types/node': 18.14.0
   '@vercel/ncc': 0.36.1
   '@vitest/coverage-c8': 0.28.5
+  cookie: 0.5.0
   prettier: 2.8.4
   typescript: 4.9.5
   vite: 4.1.3_@types+node@18.14.0
@@ -253,6 +257,10 @@ packages:
     resolution: {integrity: sha512-KnRanxnpfpjUTqTCXslZSEdLfXExwgNxYPdiO2WGUj8+HDjFi8R3k5RVKPeSCzLjCcshCAtVO2QBbVuAV4kTnw==}
     dev: true
 
+  /@types/cookie/0.5.1:
+    resolution: {integrity: sha512-COUnqfB2+ckwXXSFInsFdOAWQzCCx+a5hq2ruyj+Vjund94RJQd4LG2u9hnvJrTgunKAaax7ancBYlDrNYxA0g==}
+    dev: true
+
   /@types/istanbul-lib-coverage/2.0.4:
     resolution: {integrity: sha512-z/QT1XN4K4KYuslS23k62yDIDLwLFkzxOuMplDtObz0+y7VqJCaO2o+SPwHCvLFZh7xazvvoor2tA/hPz9ee7g==}
     dev: true
@@ -450,6 +458,11 @@ packages:
 
   /convert-source-map/1.9.0:
     resolution: {integrity: sha512-ASFBup0Mz1uyiIjANan1jzLQami9z1PoYSZCiiYW2FczPbenXc45FZdBZLzOT+r6+iciuEModtmCti+hjaAk0A==}
+    dev: true
+
+  /cookie/0.5.0:
+    resolution: {integrity: sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==}
+    engines: {node: '>= 0.6'}
     dev: true
 
   /cross-spawn/7.0.3:
