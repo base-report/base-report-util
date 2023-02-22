@@ -6,6 +6,7 @@ export type {
 	MaybeNumber,
 	MaybeDate
 } from './types/Maybes'
+export type { EntryStrategy, ExitStrategy } from './types/Strategy'
 export type {
 	ChartData,
 	ChartTimeFrame,
@@ -24,3 +25,4 @@ export {
 	formatPct,
 	formatDate
 } from './format'
+export { getCombos } from './moveFinder'

@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest'
 import { round, sma, calculateAdrPct, calcChangePercent } from '../src/calc'
-import { sampleData } from './data/timeseries'
+import { NET_200 } from './data/timeseries'
 
 describe('round', () => {
 	test('returns "N/A" when value is "N/A"', () => {
@@ -30,24 +30,24 @@ describe('round', () => {
 
 describe('sma', () => {
 	test('returns the correct value for SMA10', () => {
-		const first10 = sampleData.slice(0, 10)
+		const first10 = NET_200.slice(0, 10)
 		expect(sma(first10)).toBe(121.79)
 	})
 
 	test('returns the correct value for SMA20', () => {
-		const first20 = sampleData.slice(0, 20)
+		const first20 = NET_200.slice(0, 20)
 		expect(sma(first20)).toBe(142.814)
 	})
 
 	test('returns the correct value for SMA50', () => {
-		const first50 = sampleData.slice(0, 50)
+		const first50 = NET_200.slice(0, 50)
 		expect(sma(first50)).toBe(173.154)
 	})
 })
 
 describe('calculateAdrPct', () => {
 	test('returns the correct value for ADR', () => {
-		expect(calculateAdrPct(sampleData)).toBe(8.29)
+		expect(calculateAdrPct(NET_200)).toBe(8.29)
 	})
 
 	test('returns 0 for empty list', () => {
