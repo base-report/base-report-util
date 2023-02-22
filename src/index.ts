@@ -16,6 +16,7 @@ export type {
 export { CHART_TIME_FRAMES } from './types/ChartData'
 
 export { round, sma, calculateAdrPct, calcChangePercent } from './calc'
+export { getAccessToken } from './cookie'
 export { getWeek, isDatePast } from './date'
 export {
 	formatNumber,
