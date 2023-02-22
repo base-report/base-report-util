@@ -2,7 +2,7 @@
 	"name": "base-report-util",
 	"description": "This package contains utility functions and types that are used for building base.report.",
 	"author": "e0",
-	"version": "0.0.11",
+	"version": "0.0.12",
 	"license": "MIT",
 	"homepage": "https://base.report",
 	"repository": {
@@ -17,6 +17,7 @@
 	],
 	"type": "module",
 	"module": "./dist/index.js",
+	"main": "./dist/index.js",
 	"files": [
 		"dist"
 	],
