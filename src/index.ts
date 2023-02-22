@@ -1,4 +1,4 @@
-export type { NumberOrNA } from './types/NumberOrNa'
+export type { NumberOrNA } from './types/NumberOrNA'
 export type {
 	Maybe,
 	MaybePromise,

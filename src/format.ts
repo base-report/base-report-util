@@ -1,5 +1,5 @@
 import type { MaybeNumber, MaybeString } from './types/Maybes'
-import type { NumberOrNA } from './types/NumberOrNa'
+import type { NumberOrNA } from './types/NumberOrNA'
 
 const formatNumber = (n: MaybeNumber | NumberOrNA, decimals = 2): string => {
 	if (n === 'N/A' || n === null || !isFinite(n)) return 'N/A'
