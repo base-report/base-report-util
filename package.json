@@ -2,7 +2,7 @@
 	"name": "base-report-util",
 	"description": "This package contains utility functions and types that are used for building base.report.",
 	"author": "e0",
-	"version": "0.0.10",
+	"version": "0.0.11",
 	"license": "MIT",
 	"homepage": "https://base.report",
 	"repository": {
@@ -23,7 +23,7 @@
 	"types": "./dist/index.d.ts",
 	"scripts": {
 		"dev": "vite",
-		"build": "rm -rf ./dist && esbuild src/index.ts --bundle --outdir=dist --platform=node && tsc --emitDeclarationOnly --outDir dist",
+		"build": "rm -rf ./dist && esbuild src/index.ts --bundle --outdir=dist --platform=neutral && tsc --emitDeclarationOnly --outDir dist",
 		"prepare": "pnpm build",
 		"preview": "vite preview",
 		"format": "prettier --write .",
