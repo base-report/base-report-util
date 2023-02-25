@@ -1,3 +1,4 @@
+export type { GenericObject } from './types/GenericObject'
 export type { NumberOrNA } from './types/NumberOrNA'
 export type {
 	Maybe,
@@ -16,6 +17,7 @@ export type {
 } from './types/ChartData'
 export { CHART_TIME_FRAMES } from './types/ChartData'
 
+export { deepFreeze, difference } from './object'
 export { round, sma, calculateAdrPct, calcChangePercent } from './calc'
 export { getAccessToken } from './cookie'
 export { getWeek, isDatePast } from './date'
