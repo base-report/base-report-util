@@ -2,12 +2,10 @@ lockfileVersion: 5.4
 
 specifiers:
   '@types/cookie': ^0.5.1
-  '@types/lodash-es': ^4.17.6
   '@types/node': ^18.14.0
   '@vitest/coverage-c8': ^0.28.5
   cookie: ^0.5.0
   esbuild: ^0.17.10
-  lodash-es: ^4.17.21
   prettier: 2.8.4
   typescript: ^4.9.5
   vite: ^4.1.0
@@ -15,12 +13,10 @@ specifiers:
 
 devDependencies:
   '@types/cookie': 0.5.1
-  '@types/lodash-es': 4.17.6
   '@types/node': 18.14.0
   '@vitest/coverage-c8': 0.28.5
   cookie: 0.5.0
   esbuild: 0.17.10
-  lodash-es: 4.17.21
   prettier: 2.8.4
   typescript: 4.9.5
   vite: 4.1.3_@types+node@18.14.0
@@ -467,16 +463,6 @@ packages:
     resolution: {integrity: sha512-z/QT1XN4K4KYuslS23k62yDIDLwLFkzxOuMplDtObz0+y7VqJCaO2o+SPwHCvLFZh7xazvvoor2tA/hPz9ee7g==}
     dev: true
 
-  /@types/lodash-es/4.17.6:
-    resolution: {integrity: sha512-R+zTeVUKDdfoRxpAryaQNRKk3105Rrgx2CFRClIgRGaqDTdjsm8h6IYA8ir584W3ePzkZfst5xIgDwYrlh9HLg==}
-    dependencies:
-      '@types/lodash': 4.14.191
-    dev: true
-
-  /@types/lodash/4.14.191:
-    resolution: {integrity: sha512-BdZ5BCCvho3EIXw6wUCXHe7rS53AIDPLE+JzwgT+OsJk53oBfbSmZZ7CX4VaRoN78N+TJpFi9QPlfIVNmJYWxQ==}
-    dev: true
-
   /@types/node/18.14.0:
     resolution: {integrity: sha512-5EWrvLmglK+imbCJY0+INViFWUHg1AHel1sq4ZVSfdcNqGy9Edv3UB9IIzzg+xPaUcAgZYcfVs2fBcwDeZzU0A==}
     dev: true
@@ -917,10 +903,6 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       p-locate: 5.0.0
-    dev: true
-
-  /lodash-es/4.17.21:
-    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
     dev: true
 
   /loupe/2.3.6:

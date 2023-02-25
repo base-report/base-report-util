@@ -2,7 +2,7 @@
 	"name": "base-report-util",
 	"description": "This package contains utility functions and types that are used for building base.report.",
 	"author": "e0",
-	"version": "0.0.13",
+	"version": "0.0.14",
 	"license": "MIT",
 	"homepage": "https://base.report",
 	"repository": {
@@ -24,7 +24,7 @@
 	"types": "./dist/index.d.ts",
 	"scripts": {
 		"dev": "vite",
-		"build": "rm -rf ./dist && esbuild src/index.ts --bundle --outdir=dist --platform=browser && tsc --emitDeclarationOnly --outDir dist",
+		"build": "rm -rf ./dist && esbuild src/index.ts --bundle --outdir=dist --platform=neutral && tsc --emitDeclarationOnly --outDir dist",
 		"prepare": "pnpm build",
 		"preview": "vite preview",
 		"format": "prettier --write .",
@@ -33,12 +33,10 @@
 	},
 	"devDependencies": {
 		"@types/cookie": "^0.5.1",
-		"@types/lodash-es": "^4.17.6",
 		"@types/node": "^18.14.0",
 		"@vitest/coverage-c8": "^0.28.5",
 		"cookie": "^0.5.0",
 		"esbuild": "^0.17.10",
-		"lodash-es": "^4.17.21",
 		"prettier": "2.8.4",
 		"typescript": "^4.9.5",
 		"vite": "^4.1.0",

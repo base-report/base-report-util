@@ -1,4 +1,3 @@
-import { transform, isEqual, isObject } from 'lodash-es'
 import type { GenericObject } from './types/GenericObject'
 
 const deepFreeze = (object: GenericObject) => {
@@ -18,22 +17,36 @@ const deepFreeze = (object: GenericObject) => {
 	return Object.freeze(object)
 }
 
-const difference = (object: GenericObject, base: GenericObject) =>
-	transform(
-		object,
-		(result: GenericObject, value, key) => {
-			if (!isEqual(value, base[key])) {
-				result[key] =
-					isObject(value) && isObject(base[key])
-						? difference(value, base[key])
-						: value
+const difference = (object: GenericObject, base: GenericObject) => {
+	const result: GenericObject = {}
+	const objectKeys = Object.keys(object)
+	const baseKeys = Object.keys(base)
+
+	objectKeys.forEach((key) => {
+		if (!baseKeys.includes(key)) {
+			result[key] = object[key]
+		} else {
+			const objectValue = object[key]
+			const baseValue = base[key]
+
+			if (typeof objectValue === 'object' && typeof baseValue === 'object') {
+				const differenceObj = difference(objectValue, baseValue)
+				if (Object.keys(differenceObj).length > 0) {
+					result[key] = differenceObj
+				}
+			} else if (objectValue !== baseValue) {
+				result[key] = objectValue
 			}
-		},
-		transform(base, (result: GenericObject, value, key) => {
-			if (!object.hasOwnProperty(key)) {
-				result[key] = value
-			}
-		})
-	)
+		}
+	})
+
+	baseKeys.forEach((key) => {
+		if (!objectKeys.includes(key)) {
+			result[key] = base[key]
+		}
+	})
+
+	return result
+}
 
 export { deepFreeze, difference }
