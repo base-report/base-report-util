@@ -14,9 +14,27 @@ type CustomTimeseries = {
 	daily: Timeseries
 }
 
-const CHART_TIME_FRAMES = ['daily', 'weekly', 'monthly']
+const INTRADAY_CHART_TIME_FRAMES = [
+	'1min',
+	'5min',
+	'15min',
+	'30min',
+	'1hour',
+	'4hour'
+]
+
+const CHART_TIME_FRAMES = [
+	'daily',
+	'weekly',
+	'monthly',
+	...INTRADAY_CHART_TIME_FRAMES
+]
+
+const itfValues = stringTuple(...INTRADAY_CHART_TIME_FRAMES)
+type IntradayChartTimeFrame = (typeof itfValues)[number] // '1min' | '5min' | '15min' | '30min' | '1hour' | '4hour'
+
 const tfValues = stringTuple(...CHART_TIME_FRAMES)
-type ChartTimeFrame = (typeof tfValues)[number] // 'daily' | 'weekly' | 'monthly'
+type ChartTimeFrame = (typeof tfValues)[number] // 'daily' | 'weekly' | 'monthly' | '1min' | '5min' | '15min' | '30min' | '1hour' | '4hour'
 
 type MarkedMove = {
 	entry: ChartData
@@ -26,8 +44,9 @@ type MarkedMove = {
 export type {
 	ChartData,
 	ChartTimeFrame,
+	IntradayChartTimeFrame,
 	MarkedMove,
 	Timeseries,
 	CustomTimeseries
 }
-export { CHART_TIME_FRAMES }
+export { CHART_TIME_FRAMES, INTRADAY_CHART_TIME_FRAMES }

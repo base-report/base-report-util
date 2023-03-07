@@ -11,11 +11,15 @@ export type { EntryStrategy, ExitStrategy } from './types/Strategy'
 export type {
 	ChartData,
 	ChartTimeFrame,
+	IntradayChartTimeFrame,
 	MarkedMove,
 	Timeseries,
 	CustomTimeseries
 } from './types/ChartData'
-export { CHART_TIME_FRAMES } from './types/ChartData'
+export {
+	CHART_TIME_FRAMES,
+	INTRADAY_CHART_TIME_FRAMES
+} from './types/ChartData'
 
 export { deepFreeze, difference } from './object'
 export { round, sma, calculateAdrPct, calcChangePercent } from './calc'
