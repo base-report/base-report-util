@@ -8,6 +8,7 @@ export type {
 	MaybeDate
 } from './types/Maybes'
 export type { EntryStrategy, ExitStrategy } from './types/Strategy'
+export type { TimeoutType, IntervalType } from './types/Timer'
 export type {
 	ChartData,
 	ChartTimeFrame,
