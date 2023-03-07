@@ -20,7 +20,7 @@ export { CHART_TIME_FRAMES } from './types/ChartData'
 export { deepFreeze, difference } from './object'
 export { round, sma, calculateAdrPct, calcChangePercent } from './calc'
 export { getAccessToken } from './cookie'
-export { getWeek, isDatePast } from './date'
+export { getWeek, parseDate, isDatePast } from './date'
 export {
 	formatNumber,
 	formatLetterToNumber,

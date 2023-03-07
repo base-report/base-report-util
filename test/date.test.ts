@@ -1,5 +1,5 @@
 import { describe, expect, test, beforeEach, afterEach, vi } from 'vitest'
-import { getWeek, isDatePast } from '../src/date'
+import { getWeek, parseDate, isDatePast } from '../src/date'
 
 describe('getWeek', () => {
 	test('returns the correct week for a given date', () => {
@@ -19,6 +19,30 @@ describe('getWeek', () => {
 
 	test('handles invalid dates', () => {
 		expect(getWeek(new Date('abc'))).toBeNaN()
+	})
+})
+
+describe('parseDate', () => {
+	test('should return the correct date object with the provided date string', () => {
+		const date = new Date()
+		const offset = date.getTimezoneOffset()
+
+		const dateString = '2022-01-01'
+		const utcDate = new Date(Date.UTC(2022, 0, 1, 16, 0, 0, 0))
+		const expectedDate = new Date(utcDate.getTime() + offset * 60 * 1000)
+
+		expect(parseDate(dateString)).toEqual(expectedDate)
+	})
+
+	test('should return the correct date object with the provided datetime string', () => {
+		const date = new Date()
+		const offset = date.getTimezoneOffset()
+
+		const dateString = '2022-01-01 15:30:00'
+		const utcDate = new Date(Date.UTC(2022, 0, 1, 15, 30, 0, 0))
+		const expectedDate = new Date(utcDate.getTime() + offset * 60 * 1000)
+
+		expect(parseDate(dateString)).toEqual(expectedDate)
 	})
 })
 
