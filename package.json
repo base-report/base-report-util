@@ -2,7 +2,7 @@
 	"name": "base-report-util",
 	"description": "This package contains utility functions and types that are used for building base.report.",
 	"author": "e0",
-	"version": "0.0.17",
+	"version": "0.0.18",
 	"license": "MIT",
 	"homepage": "https://base.report",
 	"repository": {
