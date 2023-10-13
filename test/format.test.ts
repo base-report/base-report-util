@@ -75,21 +75,21 @@ describe('formatPct', () => {
 
 	test('formats a positive number with sign correctly', () => {
 		expect(formatPct(12.34)).toBe('+12.34%')
-		expect(formatPct(100)).toBe('+100.00%')
-		expect(formatPct(0.5)).toBe('+0.50%')
-		expect(formatPct(0.5, false)).toBe('0.50%')
+		expect(formatPct(100)).toBe('+100%')
+		expect(formatPct(0.5)).toBe('+0.5%')
+		expect(formatPct(0.5, false)).toBe('0.5%')
 	})
 
 	test('formats a negative number with sign correctly', () => {
 		expect(formatPct(-12.34)).toBe('-12.34%')
-		expect(formatPct(-100)).toBe('-100.00%')
-		expect(formatPct(-0.5)).toBe('-0.50%')
-		expect(formatPct(-0.5, false)).toBe('-0.50%')
+		expect(formatPct(-100)).toBe('-100%')
+		expect(formatPct(-0.5)).toBe('-0.5%')
+		expect(formatPct(-0.5, false)).toBe('-0.5%')
 	})
 
 	test('formats a zero correctly', () => {
-		expect(formatPct(0)).toBe('0.00%')
-		expect(formatPct(0, false)).toBe('0.00%')
+		expect(formatPct(0)).toBe('0%')
+		expect(formatPct(0, false)).toBe('0%')
 	})
 })
 

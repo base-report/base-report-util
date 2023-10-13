@@ -1,20 +1,29 @@
 import type { MaybeNumber, MaybeString } from './types/Maybes'
 import type { NumberOrNA } from './types/NumberOrNA'
 
+const customToFixed = (n: number, precision: number): string => {
+	let s = n.toFixed(precision)
+	if (precision > 0 && s.indexOf('.') !== -1) {
+		s = s.replace(/0+$/, '') // Remove trailing zeros
+		s = s.replace(/\.$/, '') // Remove trailing dot if no decimals left
+	}
+	return s
+}
+
 const formatNumber = (n: MaybeNumber | NumberOrNA, decimals = 2): string => {
 	if (n === 'N/A' || n === null || !isFinite(n)) return 'N/A'
 
 	const num = Number(n)
 
 	return Math.abs(num) >= 1.0e12
-		? (num / 1.0e12).toFixed(decimals) + ' T'
+		? customToFixed(num / 1.0e12, decimals) + ' T'
 		: Math.abs(num) >= 1.0e9
-		? (num / 1.0e9).toFixed(decimals) + ' B'
+		? customToFixed(num / 1.0e9, decimals) + ' B'
 		: Math.abs(num) >= 1.0e6
-		? (num / 1.0e6).toFixed(decimals) + ' M'
+		? customToFixed(num / 1.0e6, decimals) + ' M'
 		: Math.abs(num) >= 1.0e3
-		? (num / 1.0e3).toFixed(decimals) + ' K'
-		: num.toFixed(decimals)
+		? customToFixed(num / 1.0e3, decimals) + ' K'
+		: customToFixed(num, decimals)
 }
 
 const formatLetterToNumber = (letter: string): number => {
